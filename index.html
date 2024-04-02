@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open Windows and Play Audio</title>
+</head>
+<body>
+  <script>
+    function openInNewWindow(url) {
+      return window.open(url, '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=800,height=600');
+    }
+
+    var url = "https://static.wikia.nocookie.net/malware-history/images/5/58/YouAreAnIdiot.gif/revision/latest?cb=20221111194639";
+    var audioUrl = "recording2.wav";
+    var vocarooEmbed = '<div><iframe width="300" height="60" src="https://vocaroo.com/embed/127aVQp9MmyJ?autoplay=0" frameborder="0" allow="autoplay"></iframe><br><a href="https://voca.ro/127aVQp9MmyJ" title="Vocaroo Voice Recorder" target="_blank">View on Vocaroo &gt;&gt;</a></div>';
+
+    // Open 10 separate windows
+    for (var i = 0; i < 10; i++) {
+      var win = openInNewWindow(url);
+    }
+
+    // Play audio
+    var audio = new Audio(audioUrl);
+    audio.play();
+  </script>
+  
+  <!-- Embed Vocaroo voice recorder -->
+  <div>
+    <iframe width="300" height="60" src="https://vocaroo.com/embed/127aVQp9MmyJ?autoplay=1" frameborder="0" allow="autoplay"></iframe><br>
+    <a href="https://voca.ro/127aVQp9MmyJ" title="Vocaroo Voice Recorder" target="_blank">View on Vocaroo &gt;&gt;</a>
+  </div>
+</body>
+</html>
